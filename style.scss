@@ -1,0 +1,41 @@
+@import "../bootstrap-scss/functions";
+
+// Palette
+$blanc: #ffffff;
+$beige-clair: #f8f4ec;
+$beige: #a8895a;
+$beige-fonce: #8a7350;
+$texte: #3b342b;
+
+// Couleurs de base Bootstrap
+$primary: $beige-fonce;
+$secondary: $beige;
+$light: $beige-clair;
+$dark: $texte;
+$white: $blanc;
+$body-bg: $beige-clair;
+$body-color: $texte;
+$border-color: $beige;
+$text-muted: $beige-fonce;
+$body-secondary-color: $beige-fonce;
+
+@import "../bootstrap-scss/variables";
+@import "../bootstrap-scss/mixins";
+@import "../bootstrap-scss/bootstrap";
+
+.planning-par-jour {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 110px repeat(6, 1fr);
+  }
+}
+
+.colonne-horaires,
+.jour-colonne {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-rows: 45px 140px 45px 130px;
+  }
+}
